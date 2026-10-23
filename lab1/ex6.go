@@ -1,8 +1,7 @@
-O
 package main
- 
+
 import "fmt"
- 
+
 func main() {
 	inaltimi := map[string]int{
 		"Andrei": 190,
@@ -12,13 +11,12 @@ func main() {
 		"George": 178,
 		"Ana":    165,
 	}
- 
 
 	nume := []string{}
 	for n := range inaltimi {
 		nume = append(nume, n)
 	}
- 
+
 	for i := 0; i < len(nume)-1; i++ {
 		for j := 0; j < len(nume)-1-i; j++ {
 			if inaltimi[nume[j]] < inaltimi[nume[j+1]] {
@@ -28,7 +26,7 @@ func main() {
 			}
 		}
 	}
- 
+
 	for _, n := range nume {
 		fmt.Println(n)
 	}
